@@ -1,23 +1,24 @@
 #include "iolib.hpp"
 
-int main()
-{
-	long a, b, k;
-	a = 0;
-	b = 1;
-	print("Введите число: ");
-    longUserInput(k);
-    while (k <= 0)
-    {
-        cout << "Введите число больше 0.";
-        longUserInput(k);
+int fibonacciSolver(int number) {
+    if (number <= 0) {
+        return 0;
+    } else if (number == 1) {
+        return 1;
+    } else {
+        return fibonacciSolver(number - 1) + fibonacciSolver(number - 2);
     }
+}
+
+int main() {
+    int count;
+
+    print("Введите число: ");
+    intUserInput(count);
+
     print("Числа Фибоначчи: ");
-    while (k != 0)
-    {
-        print(a, " ");
-        a = a + b;
-        b = a - b;
-        k = k - 1;
+    for (int i = 0; i < count; i++) {
+        std::cout << fibonacciSolver(i) << " ";
     }
+    println();
 }

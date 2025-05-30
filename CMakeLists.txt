@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_executable(NetoFunctions
 iolib.hpp
-firstTask.cpp 
-#secondTask.cpp
+#firstTask.cpp 
+secondTask.cpp
 #thirdTask.cpp
 )
